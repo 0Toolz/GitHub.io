@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Learning Path</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.0/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        h1 { text-align: center; }
+        .mermaid { margin: 0 auto; text-align: left; max-width: 90%; }
+    </style>
+</head>
+<body>
+    <h1>Cybersecurity Learning Path Flowchart</h1>
+    <div class="mermaid">
+        graph TD;
+        A((Start Here<br/>Cybersecurity Fundamentals)) -->|Free| B[Intro to Cybersecurity (Cisco NetAcad)];
+        A -->|Paid| C[Intro to Cyber Security (Coursera/NYU)];
+        B --> D{{Choose Specialization}};
+        C --> D;
+        
+        subgraph "Network Security Path"
+            D --> E1[Network Security Focus];
+            E1 --> F[Cybersecurity Essentials (Cisco) - Free];
+            E1 --> G[Connect & Protect: Network Security (Coursera) - Paid];
+            F --> H[Fortinet NSE 4-7 Training - Free];
+            G --> I[Advanced Network Security (Coursera) - Paid];
+        end
+
+        subgraph "Ethical Hacking Path"
+            D --> J1[Ethical Hacking Focus];
+            J1 --> K[Ethical Hacking Essentials (EC-Council) - Free];
+            J1 --> L[Complete Ethical Hacking Course (Udemy) - Paid];
+            K --> M[Web Security Academy (PortSwigger) - Free];
+            L --> N[OffSec PEN-200 (OSCP) Training - Paid];
+        end
+
+        subgraph "Cloud Security Path"
+            D --> O1[Cloud Security Focus];
+            O1 --> P[Fundamentals of Cloud Security (Palo Alto) - Free];
+            O1 --> Q[Cloud Security Basics (Coursera) - Paid];
+            P --> R[CCSK Certification Prep (Cybrary) - Free];
+            Q --> S[CCSP Certification Training (Coursera) - Paid];
+        end
+
+        subgraph "Incident Response Path"
+            D --> T1[Incident Response Focus];
+            T1 --> U[Incident Response Lifecycle (Cybrary) - Free];
+            T1 --> V[Cyber Incident Response (Coursera) - Paid];
+            U --> W[Digital Forensics (OpenLearn) - Free];
+            V --> X[SANS SEC504 Incident Handling Course - Paid];
+        end
+        
+        click B "https://www.netacad.com/courses/introduction-to-cybersecurity" _blank;
+        click C "https://www.coursera.org/specializations/intro-cyber-security" _blank;
+        click F "https://www.netacad.com/courses/cybersecurity-essentials" _blank;
+        click G "https://www.coursera.org/learn/networks-and-network-security" _blank;
+        click H "https://www.fortinet.com/training/cybersecurity-professionals" _blank;
+        click I "https://www.coursera.org/specializations/advanced-network-security" _blank;
+        click K "https://www.coursera.org/learn/ethical-hacking-essentials-ehe" _blank;
+        click L "https://www.udemy.com/course/the-complete-ethical-hacking-course/" _blank;
+        click M "https://portswigger.net/web-security" _blank;
+        click N "https://www.offsec.com/courses/pen-200/" _blank;
+        click P "https://www.paloaltonetworks.com/cyberpedia/free-cybersecurity-education-courses" _blank;
+        click Q "https://www.coursera.org/learn/cloud-security-basics" _blank;
+        click R "https://www.cybrary.it/course/ccsk" _blank;
+        click S "https://www.coursera.org/learn/ccsp1" _blank;
+        click U "https://www.cybrary.it/course/incident-response-lifecycle" _blank;
+        click V "https://www.coursera.org/learn/incident-response" _blank;
+        click W "https://www.open.edu/openlearn/science-maths-technology/digital-forensics/content-section-0" _blank;
+        click X "https://www.sans.org/cyber-security-courses/hacker-techniques-incident-handling/" _blank;
+    </div>
+</body>
+</html>
